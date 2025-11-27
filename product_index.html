@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>後台管理</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+
+    <!-- Summernote -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Free 6 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/product.css" />
+  </head>
+  <body>
+    <!-- ========== 左側側邊欄 ========== -->
+    <nav class="sidebar">
+      <h5 class="mb-4 fs-2">後台管理</h5>
+
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link fs-3"" href="#">會員管理</a>
+        </li>
+
+        <!-- 折疊選單 -->
+        <li class="nav-item fs-3">
+          <a
+            class="nav-link d-flex justify-content-between align-items-center "
+            data-bs-toggle="collapse"
+            href="#menu_products"
+          >商品管理<i class="bi bi-chevron-down"></i>
+          </a>
+          <div class="collapse" id="menu_products">
+            <ul class="nav flex-column ms-3">
+              <li>
+                <a class="nav-link fs-4" href="./product_index.html">商品列表</a>
+              </li>
+              <li>
+                <a class="nav-link fs-4" href="./product_add.html">新增商品</a>
+              </li>
+              <li>
+                <a class="nav-link fs-4" href="./product_edit.html">編輯商品</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        
+
+        <li class="nav-item fs-3" ><a class="nav-link" href="#">訂單管理</a></li>
+        <!-- 活動管理 -->
+        <li class="nav-item fs-3">
+          <a
+            class="nav-link d-flex justify-content-between align-items-center "
+            data-bs-toggle="collapse"
+            href="#menu_activity"
+          >活動管理<i class="bi bi-chevron-down"></i>
+          </a>
+
+          <div class="collapse" id="menu_activity">
+            <ul class="nav flex-column ms-3">
+              <li>
+                <a class="nav-link fs-4" href="#">優惠券管理</a>
+              </li>
+              <li>
+                <a class="nav-link fs-4" href="#">促銷管理</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item fs-3"><a class="nav-link" href="#">客服管理</a></li>
+      </ul>
+
+      <div class="mt-4 d-flex justify-content-center logout-wrapper">
+        <button class="btn btn-outline-primary w-50 fs-3 btn-logout ><i class="bi bi-box-arrow-right"></i> 登出</button>
+      </div>
+    </nav>
+
+    <!-- ========== 主內容區 ========== -->
+    <main>
+      <!-- 麵包屑 -->
+      <div class="d-flex align-items-center mb-3 ">
+        <ol class="breadcrumb mb-0 me-3 no-bg">
+          <li class="breadcrumb-item fs-2 "><a href="#" class="breadcrumb_index">商品管理</a></li>
+        </ol>
+
+        <a href="product_add.html" class="btn btn-primary">
+          <i class="fa-solid fa-plus"></i> 新增商品
+        </a>
+      </div>
+      <hr class="border border-primary border-2" />
+
+      <div class="btn-group mb-3 gap-2">
+        <button
+          type="button"
+          class="btn btn-outline-primary toggle-btn"
+          id="tag_mattress"
+        >
+          床墊
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary toggle-btn"
+          id="tag_frame"
+        >
+          床架
+        </button>
+      </div>
+    </main>
+
+    <!-- JS 套件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- include libraries(jQuery, bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- include summernote css/js -->
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.js"></script>
+    <!-- run summernote css/js -->
+    <script src="./js/product_index.js"></script>
+  </body>
+</html>
